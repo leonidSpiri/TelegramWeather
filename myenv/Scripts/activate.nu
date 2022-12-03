@@ -1,8 +1,8 @@
 # Setting all environment variables for the venv
 let path-name = (if ((sys).host.name == "Windows") { "Path" } { "PATH" })
-let virtual-env = "C:\Users\Administrator\PycharmProjects\TelegramWeather"
-let bin = "Scripts"
-let path-sep = ";"
+let virtual-env = "/Users/admin/PycharmProjects/TelegramWeather/venv"
+let bin = "bin"
+let path-sep = ":"
 
 let old-path = ($nu.path | str collect ($path-sep))
 
@@ -38,4 +38,4 @@ let-env PROMPT_COMMAND = $new_prompt
 # We are using alias as the function definitions because only aliases can be
 # removed from the scope
 alias pydoc = python -m pydoc
-alias deactivate = source "C:\Users\Administrator\PycharmProjects\TelegramWeather\Scripts\deactivate.nu"
+alias deactivate = source "/Users/admin/PycharmProjects/TelegramWeather/venv/bin/deactivate.nu"

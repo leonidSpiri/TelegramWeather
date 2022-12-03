@@ -1,6 +1,6 @@
 import requests
 
-from ..settings import api_config
+from settings import api_config
 
 
 def get_place_coord(city):
@@ -16,3 +16,4 @@ def get_weather(city):
     r = requests.get('https://api.weather.yandex.ru/v2/informers', params=payload, headers=api_config.weather_key)
     weather_data = r.json()
     return print(weather_data)
+
